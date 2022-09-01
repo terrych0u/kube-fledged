@@ -27,7 +27,7 @@ GOARM=7
 DOCKER_CLI_EXPERIMENTAL=enabled
 
 ifndef CONTROLLER_IMAGE_REPO
-  CONTROLLER_IMAGE_REPO=docker.io/senthilrch/kubefledged-controller
+  CONTROLLER_IMAGE_REPO=terrych0u/kube-fledged
 endif
 
 ifndef WEBHOOK_SERVER_IMAGE_REPO
@@ -67,7 +67,7 @@ ifndef OPERATORSDK_VERSION
 endif
 
 ifndef TARGET_PLATFORMS
-  TARGET_PLATFORMS=linux/amd64,linux/arm/v7,linux/arm64/v8
+  TARGET_PLATFORMS=linux/amd64
 endif
 
 ifndef OPERATOR_TARGET_PLATFORMS
