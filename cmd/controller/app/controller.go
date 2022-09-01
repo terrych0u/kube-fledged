@@ -380,7 +380,9 @@ func (c *Controller) processNextWorkItem() bool {
 		// ImageCache resource to be synced.
 		if err := c.syncHandler(key); err != nil {
 			glog.Errorf("error syncing imagecache: %v", err.Error())
-			return fmt.Errorf("error syncing imagecache: %v", err.Error())
+			// return fmt.Errorf("error syncing imagecache: %v", err.Error())
+			fmt.Println("error syncing imagecache: %v", err.Error())
+			return nil
 		}
 		// Finally, if no error occurs we Forget this item so it does not
 		// get queued again until another change happens.
